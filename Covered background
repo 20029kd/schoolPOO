@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+<header>
+  <img src="Banner.png" alt="banner with text saying the FTO page">
+    </header>
+ 
+  <style>
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+
+<div id="navbar">
+  <ul>
+  <a href="#home">Home</a>
+  <a href="#photos">Photos</a>
+  <a href="#contact">Contact</a>
+  </ul>
+</div>
+  
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <section>
+    <div class="section" id="photos">
+    <div id="phototxt">
+      <h1>Photos</h1>
+		  <p>This is the photos section.</p>
+	     <img src= 'Image-1.jpg' alt= "photo of my fto, done by Mad Mantis photography"
+      
+     </div>
+    </div>
+  </section>
+   
+  <section>
+      <div class="section" id="contact">
+        <div id="contacttxt">
+        <h1>Contact</h1>
+          <p>This is the contact section</p>
+    </div>
+  </div>
+</section>
+
+  <video autoplay muted loop id="video-background">
+    <source src="My-Video.mp4" type="video/mp4">
+  </video>
+  <div id="vidtop-content">
+    <div class="vid-info">
+      <section>
+        <h1>The FTO Project</h1>
+        <p>Hello User, My name is Koby I am the owner of a 1995 Mitsubishi FTO, very similar to the one in the video (video by:.
+      </section>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
+
+CSS
+html {
+  height: 100%;
+  width: 100%;
+ 
+  /*moves banner down*/
+  margin-top: 10px;
+}
+  /*nav background and font color*/
+body {
+color: #ffffff;
+    background-color: #000000;
+}
+
+  /*navigation stuff*/
+#navbar {
+  overflow: hidden;
+  background-color: #5c5c5c;
+ 
+}
+
+.section {
+	height: 200vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center; 
+}
+
+  /* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+  /*moves text down*/
+section {
+  margin-top: 100px;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #000000;
+	color: #fff;
+	padding: 10px;
+	z-index: 1000;
+}
+  
+nav ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+  /* Video Background */
+
+* { box-sizing: border-box; }
+.video-background {
+  background: #616161;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#vidtop-content {
+	top: 0;
+	color: #fff;
+}
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+.vid-info { width: 50%; padding: .5rem; }
+.vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+.vid-info .acronym { display: none; }
+}
+
+main {
+	margin-top: 60px;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 18px;
+}
+
+
+#phototxt {
+  background-color: #616161;
+  width: 100% 
+}
+
+#contacttxt {
+  background-color: #616161
+  width: 100%
+}
+
+SCRIPT
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
